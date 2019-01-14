@@ -1,10 +1,10 @@
 const config = {
   plan: {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: window.innerWidth * window.devicePixelRatio,
+    height: window.innerHeight * window.devicePixelRatio,
     center: {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2
+      x: window.innerWidth * window.devicePixelRatio / 2,
+      y: window.innerHeight * window.devicePixelRatio / 2
     }
   },
   grid: {

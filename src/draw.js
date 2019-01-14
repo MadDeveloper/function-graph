@@ -7,13 +7,16 @@ const drawGrid = context => {
 }
 
 const drawAxis = context => {
+  // font
+  context.font = '28px Courier'
+
   // x axis
   drawGridLine({
     from: { ...config.plan.center, x: 0 },
     to: { ...config.plan.center, x: config.plan.width },
     context
   })
-  context.fillText('𝚡', config.plan.width - 10, config.plan.center.y + 10)
+  context.fillText('x', config.plan.width - 30, config.plan.center.y + 30)
 
   // y axis
   drawGridLine({
@@ -21,7 +24,7 @@ const drawAxis = context => {
     to: { ...config.plan.center, y: 0 },
     context
   })
-  context.fillText('y', config.plan.center.x - 10, 10)
+  context.fillText('y', config.plan.center.x - 30, 30)
 }
 
 const drawLine = ({ color, width }) => ({ from, to, context }) => {
